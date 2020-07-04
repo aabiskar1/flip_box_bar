@@ -1,6 +1,6 @@
 # flip_box_bar
 
-##forked from [Flip_box_bar](https://github.com/deven98/flip_box_bar)
+#Forked from [Flip_box_bar](https://github.com/deven98/flip_box_bar)
 []
 
 A 3D BottomNavigationBar inspired by Dribbble design by Dannniel
