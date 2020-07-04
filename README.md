@@ -1,5 +1,8 @@
 # flip_box_bar
 
+##forked from [Flip_box_bar](https://github.com/deven98/flip_box_bar)
+[]
+
 A 3D BottomNavigationBar inspired by Dribbble design by Dannniel
 [https://dribbble.com/shots/4811135-Tab-Bar-Cube-Interaction].
 
@@ -12,7 +15,7 @@ A 3D BottomNavigationBar inspired by Dribbble design by Dannniel
       // In Scaffold
       int selectedIndex = 0;
       
-      bottomNavigationBar: FlipBoxBar(
+      FlipBoxBar(
               selectedIndex: index,
               items: [
                 FlipBarItem(icon: Icon(Icons.map), text: Text("Map"), frontColor: Colors.blue, backColor: Colors.blueAccent),
@@ -28,12 +31,15 @@ A 3D BottomNavigationBar inspired by Dribbble design by Dannniel
               },
             ),
 ```     
+# For vertical position set isVerticalBar = true 
+
+
 
 # Properties
 
 ### List\<FlipBarItem\> items;
 
-The items to be displayed in the BottomNavBar.
+The items to be displayed in the NavBar.
 
 ### Duration animationDuration;
 
@@ -45,34 +51,19 @@ Callback for getting value of item selection.
 
 ### int initialIndex;
 
-The initial selected index of the BottomNavBar.
+The initial selected index of the NavBar.
 
 ### double navBarHeight;
 
-The height of the BottomNavBar.
+The height of the NavBar when it is in bottom nav position.
 
-# Note: Breaking change
 
-Prior to 0.9.0, only initialIndex was provided as a parameter. 0.9.0 onwards, user needs to
-modify the selectedIndex property and rebuild to animate. The reason for this modification is that
-it allows programmatically changing the selected index whereas the earlier version did not.
+### bool isVerticalBar;
 
-### A version of the code before 0.9.0 would look like this:
-```dart
-        // In Scaffold
-      
-      bottomNavigationBar: FlipBoxBar(
-              initialIndex: 0,
-              items: [
-                FlipBarItem(icon: Icon(Icons.map), text: Text("Map"), frontColor: Colors.blue, backColor: Colors.blueAccent),
-                FlipBarItem(icon: Icon(Icons.add), text: Text("Add"), frontColor: Colors.cyan, backColor: Colors.cyanAccent),
-                FlipBarItem(icon: Icon(Icons.chrome_reader_mode), text: Text("Read"), frontColor: Colors.orange, backColor: Colors.orangeAccent),
-                FlipBarItem(icon: Icon(Icons.print), text: Text("Print"), frontColor: Colors.purple, backColor: Colors.purpleAccent),
-                FlipBarItem(icon: Icon(Icons.print), text: Text("Print"), frontColor: Colors.pink, backColor: Colors.pinkAccent),
-              ],
-              onIndexChanged: (newIndex) {
-                print(newIndex);
-              },
-            ),
-```
+Set the navigation bar as vertical. 
+
+### double navBarWidth;
+
+The width of the NavBar when it is in vertical position.
+
 

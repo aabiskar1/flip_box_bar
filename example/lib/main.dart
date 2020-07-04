@@ -22,7 +22,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   int selectedIndex = 0;
 
   @override
@@ -30,7 +29,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(),
       body: Column(), //
-      bottomNavigationBar: FlipBoxBar(
+      bottomNavigationBar: FlipBoxBarPlus(
         selectedIndex: selectedIndex,
         items: [
           FlipBarItem(
