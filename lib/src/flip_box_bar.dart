@@ -21,12 +21,20 @@ class FlipBoxBar extends StatefulWidget {
   /// The height of the BottomNavBar.
   final double navBarHeight;
 
+  /// The flip box bar is set as vertical(column) when the bool is true
+  final bool isVerticalBar;
+
+  /// The width of the bar when the bar is in vertical position
+  final double navBarWidth;
+
   FlipBoxBar({
     @required this.items,
     this.animationDuration = const Duration(seconds: 1),
     @required this.onIndexChanged,
     @required this.selectedIndex,
     this.navBarHeight = 100.0,
+    this.isVerticalBar = false,
+    this.navBarWidth = 40,
   });
 
   @override
@@ -59,28 +67,51 @@ class _FlipBoxBarState extends State<FlipBoxBar> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     _changeValue();
     return Container(
-      height: 100.0,
-      child: Row(
-        children: widget.items.map((item) {
-          int index = widget.items.indexOf(item);
-          // Create the boxes in the NavBar.
-          return Expanded(
-            child: FlipBarElement(
-              item.icon,
-              item.text,
-              item.frontColor,
-              item.backColor,
-              _controllers[index],
-              (index) {
-                _changeValue();
-                widget.onIndexChanged(index);
-              },
-              index,
-              widget.navBarHeight,
+      height: (widget.isVerticalBar == false) ? 100 : double.infinity,
+      width: (widget.isVerticalBar == false) ? double.infinity : 40,
+      child: (widget.isVerticalBar == false)
+          ? Row(
+              children: widget.items.map((item) {
+                int index = widget.items.indexOf(item);
+                // Create the boxes in the NavBar.
+                return Expanded(
+                  child: FlipBarElement(
+                    item.icon,
+                    item.text,
+                    item.frontColor,
+                    item.backColor,
+                    _controllers[index],
+                    (index) {
+                      _changeValue();
+                      widget.onIndexChanged(index);
+                    },
+                    index,
+                    widget.navBarHeight,
+                  ),
+                );
+              }).toList(),
+            )
+          : Column(
+              children: widget.items.map((item) {
+                int index = widget.items.indexOf(item);
+                // Create the boxes in the NavBar.
+                return Expanded(
+                  child: FlipBarElement(
+                    item.icon,
+                    item.text,
+                    item.frontColor,
+                    item.backColor,
+                    _controllers[index],
+                    (index) {
+                      _changeValue();
+                      widget.onIndexChanged(index);
+                    },
+                    index,
+                    widget.navBarHeight,
+                  ),
+                );
+              }).toList(),
             ),
-          );
-        }).toList(),
-      ),
     );
   }
 
