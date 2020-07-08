@@ -1,6 +1,7 @@
 # Flip_box_bar_plus
 
 Forked from [Flip_box_bar](https://github.com/deven98/flip_box_bar)
+added support for vertical position
 
 [Installation Guide](https://pub.dev/packages/flip_box_bar_plus#-installing-tab-)
 
