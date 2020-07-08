@@ -1,8 +1,8 @@
 # Flip_box_bar_plus
 
-# Forked from [Flip_box_bar](https://github.com/deven98/flip_box_bar)
+Forked from [Flip_box_bar](https://github.com/deven98/flip_box_bar)
 
-[Installation Guide](https://pub.dev/packages/flip_box_bar_plus#-installing-tab)
+[Installation Guide](https://pub.dev/packages/flip_box_bar_plus#-installing-tab-)
 
 A 3D BottomNavigationBar inspired by Dribbble design by Dannniel
 [https://dribbble.com/shots/4811135-Tab-Bar-Cube-Interaction].
