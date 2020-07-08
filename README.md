@@ -5,8 +5,7 @@ added support for vertical position
 
 [Installation Guide](https://pub.dev/packages/flip_box_bar_plus#-installing-tab-)
 
-A 3D BottomNavigationBar inspired by Dribbble design by Dannniel
-[https://dribbble.com/shots/4811135-Tab-Bar-Cube-Interaction].
+A 3D BottomNavigationBar inspired by [Dribbble design by Dannniel](https://dribbble.com/shots/4811135-Tab-Bar-Cube-Interaction).
 
 # Demo
 
