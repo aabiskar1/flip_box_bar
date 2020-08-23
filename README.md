@@ -16,7 +16,7 @@ A 3D BottomNavigationBar inspired by [Dribbble design by Dannniel](https://dribb
       // In Scaffold
       int selectedIndex = 0;
       
-      FlipBoxBar(
+      FlipBoxBarPlus(
               selectedIndex: index,
               items: [
                 FlipBarItem(icon: Icon(Icons.map), text: Text("Map"), frontColor: Colors.blue, backColor: Colors.blueAccent),
